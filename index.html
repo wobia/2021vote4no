@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>真。愛台灣志工團官網</title>
 </head>
 <body>
@@ -58,26 +58,28 @@
             --font-serif: "STKaiti", "STKaiti TC", "LiSong Pro", "LiSong Pro TC", "Noto Serif TC", "Noto Serif CJK TC", NotoSerifCJKtc-Regular, source-han-serif-traditional, "FangSong", "KaiTi", "SimSun", "標楷體", "BiauKai", Georgia, "Times New Roman", Times, serif;
         }
         h1 {
-            font-size: 70px;
+            font-size: 50px;
             margin: 0;
             margin-bottom: 20px;
             padding: 10px;
             display: inline-block;
         }
         h2 {
-            font-size: 35px;
+            font-size: 25px;
             margin: 0;
             margin-bottom: 20px;
             padding: 10px;
             display: inline-block;
         }
         body {
+            margin: 0;
             text-align: center;
             background: var(--background-color);
             color: var(--text-color);
             font-family: var(--font-sans);
             width: 100%;
             padding: 0;
+            overflow-x: hidden;
         }
         .doc-wrapper {
             max-width: 375px;
@@ -257,7 +259,7 @@
             flex: 1 0 100%;
             padding-top: 20px; 
         }
-        @media screen and min-width(480px) {
+        @media screen and (min-width: 480px) {
             h1 {
                 font-size: 100px;
             }
