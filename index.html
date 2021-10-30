@@ -7,20 +7,245 @@
     <title>真。愛台灣志工團官網</title>
 </head>
 <body>
-    <img src="img/logo.png">
-    <h1>JOIN US!</h1>
-    <h2>1218公投&nbsp;迫在眉睫</h2>
-    <p class="text">您還在網路上<br>
-        用鍵盤說理嗎?<br>
-        請用行動保護台灣<br>
-        守護我們的下一代
-    </p>
-    <p class="join">
-        加入我們<br>一起上街發傳單吧!
-    </p>
-    <a class="button" id="cta" href="https://forms.gle/YYpGp7jyJYH5mfyj7">前往志工報名報報單</a>
-    <p>
-        <label>聯絡我們資訊</label><a href="mailto:taiwan99truelove@gmail.com">taiwan99truelove@gmail.com</a>
-    </p>
+    <div class="doc-wrapper">
+        <div class="header-wrapper">
+            <h1>JOIN US!</h1>
+            <h2>1218公投&nbsp;迫在眉睫</h2>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <p class="text">您還在網路上<br>
+                    用鍵盤說理嗎?<br>
+                    請用行動保護台灣<br>
+                    守護我們的下一代
+                </p>
+                <p class="join">
+                    加入我們<br>一起上街發傳單吧!
+                </p>
+            </div>
+            <div class="vote">
+                <div class="block"></div>
+                <div class="block vote-stamp"><img src="img/vote.png"></div>
+                <div class="block">同意</div>
+                <div class="block">不同意</div>
+            </div>
+        </div>
+        <div class="cta-wrapper">
+            <a class="btn" id="cta" href="https://forms.gle/YYpGp7jyJYH5mfyj7">前往志工報名表表單</a>
+        </div>
+        <div class="footer-wrapper">
+            <h4>關於我們</h4>
+            <div class="logo-wrapper">
+                <img src="img/logo.png" class="logo">
+                <div class="name">真。愛台灣志工團</div>
+                <div class="name-description">我們是一群網路上自主發起的志工團體<br>希望以積極行動表達我們的訴求</div>
+            </div>
+            <p>
+                <label>電子郵件：</label><a href="mailto:taiwan99truelove@gmail.com">taiwan99truelove@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    <style>
+        :root {
+            --background-color: #f3962c;
+            --paper-background-color: #ef802f;
+            --header-background-color: #f5b32b;
+            --text-color: #030001;
+            --hightlight-text-color: #033291;
+            --font-sans: "PingFang TC", "Heiti TC", "Noto Sans TC", "Noto Sans CJK TC", NotoSansCJKtc-Regular, source-han-sans-traditional, "Microsoft JhengHei Fixed", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            --font-serif: "STKaiti", "STKaiti TC", "LiSong Pro", "LiSong Pro TC", "Noto Serif TC", "Noto Serif CJK TC", NotoSerifCJKtc-Regular, source-han-serif-traditional, "FangSong", "KaiTi", "SimSun", "標楷體", "BiauKai", Georgia, "Times New Roman", Times, serif;
+        }
+        h1 {
+            font-size: 100px;
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 10px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 45px;
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 10px;
+            display: inline-block;
+        }
+        body {
+            text-align: center;
+            background: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+        }
+        .doc-wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            margin-top: 40px; 
+        }
+        .header-wrapper {
+            transform: perspective(50px)rotateY(-1deg);
+        }
+        .header-wrapper>h1,
+        .header-wrapper>h2 {
+            position: relative;
+            z-index: 1;
+        }
+        .header-wrapper>h1 {
+            transform: rotateZ(-5deg);
+        }
+        .header-wrapper h1:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 10px;
+            bottom: 10px;
+            background: var(--header-background-color);
+            transform: perspective(50px)rotateX(-2deg)rotateY(1deg)rotateZ(1deg);
+            z-index: -1;
+        }
+        .header-wrapper h2:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: var(--header-background-color);
+            transform: perspective(50px)rotateX(5deg)rotateY(-1deg);
+            z-index: -1;
+        }
+        .content-wrapper {
+            position: relative;
+            margin-bottom: 120px;
+        }
+        .content {
+            text-align: left;
+            background: var(--paper-background-color);
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            max-width: 180px;
+            border: white 6px solid;
+            transform: rotate(-5deg);
+            box-shadow: -5px 10px 5px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+        .join {
+            color: var(--hightlight-text-color);
+        }
+        .vote {
+            position: absolute;
+            top: 0;
+            display: inline-grid;
+            width: 200px;
+            height: 300px;
+            grid-template: 35% 65% / 50% 50%;
+            background: white;
+            z-index: -1;
+            border: white 6px solid;
+            box-shadow: -5px 10px 5px rgba(0,0,0,0.5);
+            transform: rotate(7deg);
+            font-family: var(--font-serif);
+        }
+        .vote .block {
+            border: black 1px solid;
+            font-size: 50px;
+            line-height: 50px;
+        }
+        .block.vote-stamp {
+            padding: 20px;
+        }
+        .block img {
+            max-width: 100%;
+            transform: rotate(17deg);
+        }
+        .cta-wrapper {
+            text-align: center;
+            margin-bottom: 100px;
+            font-size: 25px;
+        }
+        a.btn,
+        a.btn:visited {
+            text-decoration: none;
+            color: white;
+            background: var(--paper-background-color);
+            padding: 15px 50px;
+            border: white 2px solid;
+            position: relative;
+            transition: background-color .5s linear , transform .5s linear;
+        }
+        a.btn:hover {
+            background: var(--header-background-color);
+        }
+        a.btn:after,
+        a.btn:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.5);
+            transform: translateY(-10px);
+        }
+        a.btn:hover:after {
+            transform: translateY(-5px)rotateZ(-5deg);
+        }
+        a.btn:hover:before {
+            transform: translateY(-5px)rotateZ(5deg);
+        }
+        .footer-wrapper {
+            border-bottom: none;
+            background: linear-gradient(var(--paper-background-color), var(--background-color));
+            padding: 20px;
+            margin: 0;
+            position: relative;
+        }
+        .footer-wrapper:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: -6px;
+            right: -6px;
+            top: -6px;
+            bottom: 0;
+            background: linear-gradient(white, var(--background-color));
+            box-shadow: 0 -5px 5px rgba(0,0,0,0.5);
+        }
+        .footer-wrapper h4 {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+        label {
+            font-weight: bolder;;
+        }
+        
+        .logo-wrapper {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .logo {
+            flex: 1 0 100px;
+            max-width: 100px;
+        }
+        .name {
+            flex: 0 1 calc(100% - 120px);
+            padding-left: 10px;
+            text-align: left;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 100px;
+        }
+        .name-description {
+            flex: 1 0 100%;
+            padding-top: 20px; 
+        }
+    </style>
 </body>
 </html>
