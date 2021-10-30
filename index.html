@@ -36,12 +36,14 @@
         <div class="footer-wrapper">
             <h4>關於我們</h4>
             <div class="logo-wrapper">
-                <img src="img/logo.png" class="logo">
+                <div class="logo">
+                    <img src="img/logo.png">
+                </div>
                 <div class="name">真。愛台灣志工團</div>
                 <div class="name-description">我們是一群網路上自主發起的志工團體<br>希望以積極行動表達我們的訴求</div>
             </div>
             <p>
-                <label>聯絡我們：</label><a href="mailto:taiwan99truelove@gmail.com">taiwan99truelove@gmail.com</a>
+                <label>聯絡我們：</label>taiwan99truelove@gmail.com
             </p>
         </div>
     </div>
@@ -128,7 +130,7 @@
             max-width: 180px;
             border: white 6px solid;
             transform: rotate(-5deg);
-            box-shadow: -5px 10px 5px rgba(0,0,0,0.5);
+            box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
             margin-bottom: 50px;
         }
         .join {
@@ -144,7 +146,7 @@
             background: white;
             z-index: -1;
             border: white 6px solid;
-            box-shadow: -5px 10px 5px rgba(0,0,0,0.5);
+            box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
             transform: rotate(7deg);
             font-family: var(--font-serif);
         }
@@ -152,6 +154,7 @@
             border: black 1px solid;
             font-size: 50px;
             line-height: 50px;
+            padding-top: 10px;
         }
         .block.vote-stamp {
             padding: 20px;
@@ -163,7 +166,7 @@
         .cta-wrapper {
             text-align: center;
             margin-bottom: 100px;
-            font-size: 25px;
+            font-size: 20px;
         }
         a.btn,
         a.btn:visited {
@@ -236,6 +239,10 @@
             flex: 1 0 100px;
             max-width: 100px;
         }
+        .logo>img {
+            width: 100%;
+            height: auto;
+        }
         .name {
             font-size: 20px;
             flex: 0 1 calc(100% - 120px);
@@ -260,6 +267,9 @@
             }   
             .name {
                 font-size: 30px;
+            }
+            .cta-wrapper {
+                font-size: 25px;
             }
         }
     </style>
