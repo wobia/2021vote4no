@@ -24,10 +24,7 @@
                 </p>
             </div>
             <div class="vote">
-                <div class="block"></div>
-                <div class="block vote-stamp"><img src="img/vote.png"></div>
-                <div class="block">同意</div>
-                <div class="block">不同意</div>
+                <img src="img/vote-paper.png" alt="">
             </div>
         </div>
         <div class="cta-wrapper">
@@ -134,6 +131,7 @@
             transform: rotate(-5deg);
             box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
             margin-bottom: 50px;
+            margin-left: 0;
         }
         .join {
             color: var(--hightlight-text-color);
@@ -141,22 +139,17 @@
         .vote {
             position: absolute;
             top: 0;
-            display: inline-grid;
+            right: -20px;
             width: 200px;
-            height: 300px;
-            grid-template: 35% 65% / 50% 50%;
             background: white;
             z-index: -1;
             border: white 6px solid;
-            box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
             transform: rotate(7deg);
-            font-family: var(--font-serif);
+            box-shadow: 3px 10px 5px rgba(0,0,0,0.5);
         }
-        .vote .block {
-            border: black 1px solid;
-            font-size: 50px;
-            line-height: 50px;
-            padding-top: 10px;
+        .vote img {
+            width: 100%;
+            height: auto;
         }
         .block.vote-stamp {
             padding: 20px;
@@ -274,6 +267,12 @@
             }
             .cta-wrapper {
                 font-size: 25px;
+            }
+            .content {
+                margin-left: 20px;
+            }
+            .vote {
+                right: 0;
             }
         }
     </style>
