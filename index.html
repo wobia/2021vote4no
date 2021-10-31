@@ -12,6 +12,38 @@
             <h1>JOIN US!</h1>
             <h2>1218公投&nbsp;迫在眉睫</h2>
         </div>
+        <div class="countdown-wrapper">
+            倒數<span id="countdown-day"></span>天<span id="countdown-hr"></span>小時<span id="countdown-min"></span>分<span id="countdown-s"></span>秒
+            <script>
+                (function(){
+                    const voteTime = new Date('2021-12-18 00:00:00').getTime();
+                    const voteTimestamp = Math.floor(voteTime/1000);
+
+                    function setCountDown() {
+                        var dateTime = Date.now();
+                        var nowTmestamp = Math.floor(dateTime/1000);
+
+
+                        var timeDiff = voteTimestamp - nowTmestamp;
+                        if(timeDiff < 0) {timeDiff = 0;}
+                        else {
+                            var day = Math.floor(timeDiff / 86400);
+                            document.getElementById('countdown-day').innerText = day;
+                            var hr = Math.floor((timeDiff - (day * 86400))/3600);
+                            document.getElementById('countdown-hr').innerText = hr;
+                            var min = Math.floor((timeDiff - (day * 86400) - (hr * 3600)) / 60);
+                            if (min < 10) {min = "0"+min}
+                            document.getElementById('countdown-min').innerText = min;
+                            var s = Math.floor(timeDiff - (day * 86400) - (hr * 3600) - (min * 60));
+                            if (s < 10) {s = "0"+s}
+                            document.getElementById('countdown-s').innerText = s;
+                        }
+                    }
+                    setCountDown();
+                    setInterval(setCountDown, 1000);
+                })();
+            </script>
+        </div>
         <div class="content-wrapper">
             <div class="content">
                 <p class="text">您還在網路上<br>
@@ -115,6 +147,14 @@
             background: var(--header-background-color);
             transform: perspective(50px)rotateX(5deg)rotateY(-1deg);
             z-index: -1;
+        } 
+        .countdown-wrapper {
+            color: var(--hightlight-text-color);
+            margin-bottom: 40px;
+        }
+        .countdown-wrapper span {
+            font-size: 30px;
+            font-weight: bold;
         }
         .content-wrapper {
             position: relative;
@@ -261,7 +301,13 @@
             }
             .doc-wrapper {
                 max-width: 480px;
-            }   
+            }
+            .countdown-wrapper {
+                font-size: 20px;
+            }
+            .countdown-wrapper span {
+                font-size: 50px;
+            }
             .name {
                 font-size: 30px;
             }
